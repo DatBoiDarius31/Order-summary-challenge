@@ -1,37 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Order summary card</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+
+    .page {
+      background: url("/images/pattern-background-desktop.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding-top: 30px;
+    }
+
+    .wrapper {
+      min-height: auto;
+      width: 300px;
+      background-color: hsl(216, 50%, 16%);
+      display: inline-block;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0px 0px;
+      object-fit: contain;
+    }
+
+    .content{
+      text-align: center;
+    }
   </style>
 </head>
-<body>
 
-  Order Summary
+<body class="page">
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+  <div class="wrapper">
 
-  Annual Plan
-  $59.99/year
 
-  Change
+    <img src="/images/illustration-hero.svg" alt="" class="image">
 
-  Proceed to Payment
-  Cancel Order
-  
+    <div class="content">
+      
+      <div class="title">Order Summary</div>
+      <div class="description">You can now listen to millions of songs, audiobooks, and podcasts on any
+    device anywhere you like!</div>
+
+    
+        <div class="plan-container"> 
+          <div class="music-image"><img src="/images/icon-music.svg" alt=""></div>
+          <div class="plan-type">Annual Plan</div>
+          <div class="plan-price">$59.99/year</div> 
+        </div>
+   
+
+    Change
+
+    Proceed to Payment
+    Cancel Order
+    </div>
+
+    
+
+  </div>
+
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
