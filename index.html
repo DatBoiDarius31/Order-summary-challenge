@@ -7,6 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red Hat Display">
 
   <title>Frontend Mentor | Order summary card</title>
 
@@ -26,17 +27,19 @@
       background: url("/images/pattern-background-desktop.svg");
       background-size: cover;
       background-repeat: no-repeat;
+      background-color: hsl(225, 100%, 94%);
       text-align: center;
       padding-top: 30px;
     }
 
     .wrapper {
       min-height: auto;
-      width: 300px;
-      background-color: hsl(216, 50%, 16%);
+      width: clamp(280px, 25vw, 400px);
+      background-color: white;
       display: inline-block;
       border-radius: 10px;
       text-align: left;
+      box-shadow: 0 8px 25px -6px black;
     }
 
     .image {
@@ -46,8 +49,104 @@
       object-fit: contain;
     }
 
-    .content{
+    .content {
       text-align: center;
+    }
+
+    .title {
+      font-weight: 900;
+      font-family: 'Red Hat Display';
+      color: hsl(223, 47%, 23%);
+    }
+
+    .description {
+      font-family: 'Red Hat Display';
+      font-weight: 400;
+      font-size: 16px;
+      margin-left: 7%;
+      margin-right: 7%;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .plan-container {
+      background-color: hsl(225, 100%, 98%);
+      display: flex;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 5%;
+      border-radius: 10px;
+    }
+
+    .plan-type {
+      padding-bottom: 2px;
+      font-family: 'Red Hat Display';
+      font-size: 16px;
+      font-weight: 900;
+      color: hsl(223, 47%, 23%);
+    }
+
+    .plan-price {
+      padding-top: 2px;
+      font-family: 'Red Hat Display';
+      font-size: 16px;
+      font-weight: 700;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .stack {
+      display: block;
+      padding-top: 5px;
+      padding-left: 10px;
+      min-width: fit-content;
+
+    }
+
+    .change-button {
+      width: 100%;
+      text-align: right;
+      vertical-align: middle;
+      padding-top: 15px;
+      font-family: 'Red Hat Display';
+      font-weight: 400;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+
+    .payment-button{
+      background-color: hsl(245, 75%, 52%) ;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 5%;
+      border-radius: 10px;
+      margin-top: 5%;
+      font-family: 'Red Hat Display';
+      font-weight: 700;
+      color: white;
+      font-size: 16px;
+      box-shadow: 0 8px 25px -6px hsl(245, 75%, 52%);
+    }
+
+    .payment-button:hover {
+      opacity: 0.75;
+    }
+
+    .cancel-button:hover{
+      color: black;
+      opacity: 0.75;
+    }
+    .change-button:hover{
+      color: hsl(245, 75%, 52%);
+      opacity: 0.75;
+    }
+
+    .cancel-button{
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 5%;
+      border-radius: 10px;
+      font-family: 'Red Hat Display';
+      font-weight: 700;
+      color: hsl(224, 23%, 55%)
     }
   </style>
 </head>
@@ -60,33 +159,49 @@
     <img src="/images/illustration-hero.svg" alt="" class="image">
 
     <div class="content">
-      
-      <div class="title">Order Summary</div>
-      <div class="description">You can now listen to millions of songs, audiobooks, and podcasts on any
-    device anywhere you like!</div>
 
-    
-        <div class="plan-container"> 
-          <div class="music-image"><img src="/images/icon-music.svg" alt=""></div>
-          <div class="plan-type">Annual Plan</div>
-          <div class="plan-price">$59.99/year</div> 
+      <div class="title">
+        <h1>
+          Order Summary
+        </h1>
+      </div>
+
+      <div class="description">
+        <p>You can now listen to millions of songs, audiobooks, and podcasts on any
+          device anywhere you like!
+        </p>
+
+      </div>
+
+
+      <div class="plan-container">
+        <div class="music-image"><img src="/images/icon-music.svg" alt=""></div>
+        <div class="stack">
+          <div class="plan-type">Annual Plan
+          </div>
+          <div class="plan-price">$59.99/year</div>
         </div>
-   
 
-    Change
+        <div class="change-button">Change</div>
+      </div>
 
-    Proceed to Payment
-    Cancel Order
+      <div class="payment-button">
+        Proceed to Payment
+      </div>
+
+      <div class="cancel-button">
+        Cancel Order
+      </div>
+
+
+
+
+
+
     </div>
 
-    
-
-  </div>
 
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
 
